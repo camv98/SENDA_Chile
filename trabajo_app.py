@@ -4,7 +4,10 @@ import folium #pip install folium
 import streamlit as st #pip install streamlit
 from streamlit_folium import st_folium #pip install streamlit-folium
 from branca.colormap import linear
-import random
+import os
+from xgboost import XGBRegressor
+import numpy as np
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
 # Page configuration (keep this at the top)
@@ -33,6 +36,224 @@ def load_hospital_data():
     return df_hospitales
 
 df_hospitales = load_hospital_data()
+
+# Función para cargar el modelo XGBoost
+def cargar_modelo(hospital_id):
+    # Mantener el nombre original del hospital y añadir el sufijo del modelo
+    ruta_modelo = os.path.join("/home/bren/code/camv98/SENDA_Chile/models/models/", f"{hospital_id}_modelo_xgb_nativo.ubj")
+
+    if os.path.exists(ruta_modelo):
+        try:
+            modelo = XGBRegressor()
+            modelo.load_model(ruta_modelo)
+            return modelo
+        except Exception as e:
+            st.error(f"Error al cargar el modelo: {str(e)}")
+            return None
+    else:
+        st.error(f"Modelo para hospital {hospital_id} no encontrado en: {ruta_modelo}")
+        return None
+
+class ClimaPreprocessor(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        # El constructor __init__ permite definir parámetros de la instancia.
+        # es mejor tenerlo para facilitar futuras extensiones.
+        pass
+    def fit(self, X, y=None):
+        """
+        Aquí se puede procesara o almacenara información del dataset histórico.
+        En el caso de nuestro proyecto, X seria el DataFrame histórico (df_hospital) preprocesado.
+        """
+        # Guardamos el DataFrame (placeholder: hospital_df) histórico para su uso en transform.
+        self.hospital_df_ = X.copy()
+        # Convertimos la columna 'Fecha' a tipo datetime y extraemos el mes, esto entiendo que se hace por seguridad.
+        if 'Fecha' in self.hospital_df_.columns:
+            self.hospital_df_['Fecha'] = pd.to_datetime(self.hospital_df_['Fecha'])
+            self.hospital_df_['Mes'] = self.hospital_df_['Fecha'].dt.month
+        else:
+            raise ValueError("El DataFrame histórico debe tener una columna 'Fecha'")
+        return self
+
+    def transform(self, x_new):
+        """
+        x_new: diccionario con los siguientes keys:
+          - 'Temperatura Máxima'
+          - 'Temperatura Mínima'
+          - 'Precipitaciones (suma)'
+          - 'mes'
+        La función utiliza la data histórica (self.hospital_df_) para calcular:
+          - 'Diferencia Térmica': diferencia entre la temperatura máxima y mínima.
+          - 'same_month_last_year': valor obtenido de hace 12 registros dentro del mismo mes.
+          - 'hist_avg_mes': promedio histórico de 'Dias Cama Disponibles' para el mes.
+        """
+        # Validamos que la data histórica fue fijada en fit.
+        if not hasattr(self, "hospital_df_"):
+            raise AttributeError("La data histórica no ha sido fijada. Llama a fit(X) primero.")
+        # Extraemos valores desde x_new (nota: estos son los datos que deberiamos tener de la API del clima)
+        try:
+            temp_max = float(x_new['Temperatura Máxima'])
+            temp_min = float(x_new['Temperatura Mínima'])
+            precipitacion = float(x_new['Precipitaciones (suma)'])
+            mes = int(x_new['mes'])
+        except KeyError as e:
+            raise KeyError(f"Falta la clave requerida en x_new: {e}")
+        diferencia_termica = temp_max - temp_min
+
+        # Utilizamos la data histórica para calcular 'hist_avg_mes' tal cual indico Claudio.
+        df_hist = self.hospital_df_
+        df_mes = df_hist[df_hist['Mes'] == mes]
+        if df_mes.empty:
+            hist_avg_mes = np.nan
+        else:
+            hist_avg_mes = df_mes['Dias Cama Disponibles'].mean()
+
+        # Esto no se si este correcto pero para 'same_month_last_year', se puede plantear de distintas formas:
+        # la opción que escogí es obtener el valor de "Dias Cama Disponibles" de hace 12 registros
+        # para el mismo mes. Si existen al menos 12 registros para ese mes se toma el valor correspondiente
+        # no recuerdo muy bien esta parte si es asi en nuestro proyecto.
+        if len(df_mes) >= 12:
+            same_month_last_year = df_mes['Dias Cama Disponibles'].iloc[-12]
+        else:
+            same_month_last_year = np.nan
+        # El calculo del trimestre a partir del mes.
+        trimestre = (mes - 1) // 3 + 1
+        # El armado del DataFrame de salida con las columnas requeridas.
+        X_processed = pd.DataFrame([{
+            'Mes': mes,
+            'Trimestre': trimestre,
+            'Temperatura Máxima': temp_max,
+            'Temperatura Mínima': temp_min,
+            'Precipitaciones (suma)': precipitacion,
+            'Diferencia Térmica': diferencia_termica,
+            'same_month_last_year': same_month_last_year,
+            'hist_avg_mes': hist_avg_mes
+        }])
+        return X_processed
+
+
+# 3. Función principal que usa todo (nueva)
+def cargar_datos_clima(seremi,fecha_str, ruta_base="nuevo_clima/nuevo_clima/"):
+    """Carga datos climáticos desde archivo basado en hospital y fecha"""
+    fecha = pd.to_datetime(fecha_str)
+    ruta_clima = os.path.join(ruta_base, f"{seremi}.csv")
+    try:
+        df = pd.read_csv(ruta_clima)
+        df['Fecha'] = pd.to_datetime(df['Mes'], errors='coerce')
+        df['Fecha'] = pd.to_datetime(df['Fecha'])
+        df['Mes'] = df['Fecha'].dt.month
+        return df[df['Mes'] == fecha.month].iloc[-1]  # Último registro del mes
+    except Exception as e:
+        raise ValueError(f"Error cargando datos climáticos: {str(e)}")
+
+# 3. Función principal que usa todo (nueva)
+def return_xnew_prepoc(seremi,fecha, hospital, ruta_clima="nuevo_clima/nuevo_clima/"):
+    """
+    Ejemplo de uso completo:
+    resultado = predecir_camas(
+        fecha="2025-03-01",
+        hospital="Hospital Regional",
+        ruta_clima="data/climas",
+        df_hospital_historico=df_hospital
+    )
+    """
+    # Paso 1: Cargar y preparar datos climáticos
+    datos_clima = cargar_datos_clima(seremi,fecha_str=fecha)
+    # Paso 2: Crear input para el preprocesador
+    input_preprocesador = {
+        'Temperatura Máxima': datos_clima['temperature_2m_max'],
+        'Temperatura Mínima': datos_clima['temperature_2m_min'],
+        'Precipitaciones (suma)': datos_clima['precipitation_sum'],
+        'mes': pd.to_datetime(fecha).month
+    }
+    # Paso 3: Configurar y usar el ClimaPreprocessor
+    preprocesador = ClimaPreprocessor()
+    df_hospital_historico=pd.read_csv(os.path.join("df_extr/df_extr/", f"{hospital}_df_extr.csv"))
+
+    preprocesador.fit(df_hospital_historico)  # Entrenar con datos históricos
+    datos_procesados = preprocesador.transform(input_preprocesador)
+    # Paso 4: Retornar resultado (aquí podrías añadir tu modelo predictivo)
+    return datos_procesados,df_hospital_historico
+
+def preparar_x_futuro(x_new, df_historico, model):
+    """
+    Prepara X_futuro con TODAS las features exactamente como el modelo las espera
+    Args:
+        x_new: DataFrame con las columnas básicas
+        df_historico: DataFrame histórico completo
+        model: Modelo XGBoost ya entrenado (para obtener feature_names)
+    Returns:
+        DataFrame compatible al 100% con lo que el modelo espera
+    """
+    # 1. Obtener las features exactas que el modelo espera (en orden correcto)
+    features_requeridas = model.get_booster().feature_names
+    # 2. Crear DataFrame base desde x_new
+    X_futuro = x_new.copy()
+    # 3. Añadir variables obligatorias del histórico
+    ultima = df_historico.iloc[-1]
+    obligatorias = {
+        'Dias Cama Ocupados': ultima['Dias Cama Ocupados'],
+        'Promedio Cama Disponibles': ultima['Promedio Cama Disponibles'],
+        'Numero de Egresos': ultima['Numero de Egresos'],
+        'lag_1': ultima['Dias Cama Disponibles'],
+        'lag_2': df_historico['Dias Cama Disponibles'].iloc[-2] if len(df_historico) > 1 else ultima['Dias Cama Disponibles'],
+        'lag_3': df_historico['Dias Cama Disponibles'].iloc[-3] if len(df_historico) > 2 else ultima['Dias Cama Disponibles'],
+        'media_movil_3': df_historico['Dias Cama Disponibles'].rolling(3).mean().iloc[-1],
+        'porcentaje_ocupacion': (ultima['Dias Cama Ocupados'] / ultima['Promedio Cama Disponibles']) * 100
+    }
+    X_futuro = X_futuro.assign(**obligatorias)
+    # 4. Calcular variables derivadas de clima
+    if 'Temperatura Máxima' in X_futuro:
+        X_futuro['Diferencia Térmica'] = X_futuro['Temperatura Máxima'] - X_futuro['Temperatura Mínima']
+        X_futuro['interaccion_ocupacion_temp'] = X_futuro['porcentaje_ocupacion'] * X_futuro['Temperatura Máxima']
+        X_futuro['interaccion_precipitacion_disp'] = X_futuro['Precipitaciones (suma)'] * X_futuro['Promedio Cama Disponibles']
+    # 5. Inicializar columnas de viento faltantes con 0
+    vientos_requeridos = ['Viento_E', 'Viento_NE', 'Viento_S', 'Viento_SE', 'Viento_SW', 'Viento_W']
+    for viento in vientos_requeridos:
+        if viento not in X_futuro:
+            X_futuro[viento] = 0.0
+    # 6. Asegurar todas las columnas requeridas
+    for col in features_requeridas:
+        if col not in X_futuro:
+            X_futuro[col] = df_historico[col].mean() if col in df_historico.columns else 0.0
+    # 7. Ordenar columnas EXACTAMENTE como el modelo las espera
+    X_futuro = X_futuro[features_requeridas]
+    # 8. Asegurar que todos los datos sean numéricos
+    X_futuro = X_futuro.astype(float)
+    return X_futuro
+
+def hacer_prediccion(seremi,hospital_id, mes_seleccionado):
+    """Realiza la predicción de camas disponibles"""
+    model = cargar_modelo(hospital_id)
+    if model is None:
+        return None
+
+    meses_a_numeros = {
+        "Enero": 1, "Febrero": 2, "Marzo": 3, "Abril": 4,
+        "Mayo": 5, "Junio": 6, "Julio": 7, "Agosto": 8,
+        "Septiembre": 9, "Octubre": 10, "Noviembre": 11, "Diciembre": 12
+    }
+
+    # Obtener el número del mes
+    mes_numero = meses_a_numeros.get(mes_seleccionado)
+    if mes_numero is None:
+        st.error(f"Mes no reconocido: {mes_seleccionado}")
+        return None
+
+    # Crear datetime para el primer día del mes
+    año_actual = 2025
+    fecha_dt = pd.to_datetime(f"{año_actual}-{mes_numero:02d}-01")
+
+    x_new,df = return_xnew_prepoc(seremi,fecha_dt, hospital_id)
+    x_futuro = preparar_x_futuro(x_new,df_historico=df,model=model)
+
+    #st.write(x_futuro)
+
+    try:
+        y_pred = model.predict(x_futuro)
+        return int(round(y_pred[0], 0))
+    except Exception as e:
+        st.error(f"Error al hacer la predicción: {str(e)}")
+        return None
 
 # Datos completos de SEREMIs con coordenadas aproximadas
 seremi_data = {
@@ -68,20 +289,6 @@ seremi_data = {
 
 df_seremis = pd.DataFrame(seremi_data)
 
-# Function to generate random bed data for visualization, cambiar por api
-def generate_bed_data(area_name, month):
-    """Generate sample bed occupancy data for visualization"""
-    total_beds = random.randint(20, 50)  # Total de camas para el área
-    occupied = random.randint(5, total_beds-5)  # Camas ocupadas
-    available = total_beds - occupied  # Camas disponibles
-
-    return {
-        'total_beds': total_beds,
-        'occupied': occupied,
-        'available': available,
-        'occupancy_rate': round((occupied/total_beds)*100, 1),
-        'availability_rate': round((available/total_beds)*100, 1)
-    }
 
 # Función para la página de selección
 def selection_page():
@@ -265,44 +472,28 @@ def prediction_page():
     area = "Datos Servicio Salud"
     st.markdown(f"### {area}")
 
-    # Obtener datos de camas
-    bed_data = generate_bed_data(area, st.session_state.selected_month)
+    ######################################################################3
+    #             Aquí va la parte de la predicción                      #
+    #######################################################################
 
-    # Crear columnas para las gráficas
-    col1, col2 = st.columns(2)
+    camas_predichas = hacer_prediccion(st.session_state.selected_seremi, st.session_state.selected_hospital, st.session_state.selected_month)
 
-    with col1:
-        # Gráfica circular de ocupación
-        fig_occupied = px.pie(
-            names=['Ocupadas', 'Disponibles'],
-            values=[bed_data['occupied'], bed_data['available']],
-            title=f"Ocupación: {bed_data['occupancy_rate']}%",
-            color=['Ocupadas', 'Disponibles'],
-            color_discrete_map={'Ocupadas':'#EF553B', 'Disponibles':'#00CC96'}
-        )
-        st.plotly_chart(fig_occupied, use_container_width=True)
+    if camas_predichas is not None:
+        st.markdown(f"""
+        <div style="text-align: center; margin: 50px 0;">
+            <h2 style="font-size: 1.8rem;">Para el mes de <strong>{st.session_state.selected_month}</strong>, se predice que:</h2>
+            <h1 style="font-size: 4rem; color: #00CC96; margin: 20px 0;">{camas_predichas}</h1>
+            <h2 style="font-size: 1.8rem;">será el número de camas disponibles</h2>
+        </div>
+        """, unsafe_allow_html=True)
 
-    with col2:
-        # Gráfica circular de disponibilidad
-        fig_available = px.pie(
-            names=['Disponibles', 'Ocupadas'],
-            values=[bed_data['available'], bed_data['occupied']],
-            title=f"Disponibilidad: {bed_data['availability_rate']}%",
-            color=['Disponibles', 'Ocupadas'],
-            color_discrete_map={'Disponibles':'#00CC96', 'Ocupadas':'#EF553B'}
-        )
-        st.plotly_chart(fig_available, use_container_width=True)
-
-    # Mostrar métricas
-    st.metric(label="Total de camas", value=bed_data['total_beds'])
-
-    col_metric1, col_metric2 = st.columns(2)
-    with col_metric1:
-        st.metric(label="Camas ocupadas",
-                value=f"{bed_data['occupied']} ({bed_data['occupancy_rate']}%)")
-    with col_metric2:
-        st.metric(label="Camas disponibles",
-                value=f"{bed_data['available']} ({bed_data['availability_rate']}%)")
+        with st.expander("Detalles de la predicción"):
+                st.write(f"**Hospital:** {st.session_state.selected_hospital}")
+                st.write(f"**Modelo utilizado:** XGBoost")
+                st.write(f"**Mes predicho:** {st.session_state.selected_month}")
+                st.write("**Características utilizadas:** Mes, Trimestre, Datos meteorológicos, Históricos")
+    else:
+        st.warning("No se pudo obtener la predicción")
 
 # Main navigation
 if st.session_state.current_page == "mapa":
