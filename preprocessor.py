@@ -137,11 +137,11 @@ class ClimaPreprocessor(BaseEstimator, TransformerMixin):
         """
         Este método se invoca cuando se "entrena" el pipeline.
         Aquí se puede procesar o almacenar información del dataset histórico.
-        En nuestro caso, esperamos que X sea el DataFrame histórico (df_hospital) preprocesado.
+        En el caso de nuestro proyecto, X seria el DataFrame histórico (df_hospital) preprocesado.
         """
         # Guardamos el DataFrame histórico para su uso en transform.
         self.hospital_df_ = X.copy()
-        # Por seguridad, convertimos la columna 'Fecha' a tipo datetime y extraemos el mes.
+        # Convertimos la columna 'Fecha' a tipo datetime y extraemos el mes, esto segun lei se hace por seguridad.
         if 'Fecha' in self.hospital_df_.columns:
             self.hospital_df_['Fecha'] = pd.to_datetime(self.hospital_df_['Fecha'])
             self.hospital_df_['Mes'] = self.hospital_df_['Fecha'].dt.month
@@ -166,7 +166,7 @@ class ClimaPreprocessor(BaseEstimator, TransformerMixin):
         if not hasattr(self, "hospital_df_"):
             raise AttributeError("La data histórica no ha sido fijada. Llama a fit(X) primero.")
 
-        # Extraemos valores desde x_new (nota: se espera que estas claves existan)
+        # Extraemos valores desde x_new (nota: estos son los datos que deberiamos tener de la API del clima)
         try:
             temp_max = float(x_new['Temperatura Máxima'])
             temp_min = float(x_new['Temperatura Mínima'])
@@ -177,27 +177,27 @@ class ClimaPreprocessor(BaseEstimator, TransformerMixin):
 
         diferencia_termica = temp_max - temp_min
 
-        # Utilizamos la data histórica para calcular 'hist_avg_mes'.
+        # Utilizamos la data histórica para calcular 'hist_avg_mes' tal cual indico Claudio.
         df_hist = self.hospital_df_
         df_mes = df_hist[df_hist['Mes'] == mes]
         if df_mes.empty:
             hist_avg_mes = np.nan
         else:
-            # 'hist_avg_mes' es el promedio de "Dias Cama Disponibles" para el mes.
             hist_avg_mes = df_mes['Dias Cama Disponibles'].mean()
 
-        # Para 'same_month_last_year', se puede plantear de distintas formas:
-        # Una opción es obtener el valor de "Dias Cama Disponibles" de hace 12 registros
-        # para el mismo mes. Aquí, si existen al menos 12 registros para ese mes se toma el valor correspondiente.
+        # Esto no se si este correcto pero para 'same_month_last_year', se puede plantear de distintas formas:
+        # la opción que escogí es obtener el valor de "Dias Cama Disponibles" de hace 12 registros
+        # para el mismo mes. Aquí, si existen al menos 12 registros para ese mes se toma el valor correspondiente
+        # que es como lo entendi.
         if len(df_mes) >= 12:
             same_month_last_year = df_mes['Dias Cama Disponibles'].iloc[-12]
         else:
             same_month_last_year = np.nan
 
-        # Se calcula el trimestre a partir del mes.
+        # El calculo del trimestre a partir del mes.
         trimestre = (mes - 1) // 3 + 1
 
-        # Se arma el DataFrame de salida con las columnas requeridas.
+        # El armado del DataFrame de salida con las columnas requeridas.
         X_processed = pd.DataFrame([{
             'Mes': mes,
             'Trimestre': trimestre,

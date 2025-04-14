@@ -18,10 +18,10 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 def pipeline_final_mae_reducido(hospital: str, filtrado_limpio: pd.DataFrame, seremi_data: pd.DataFrame) -> Union[pd.DataFrame, None]:
     """
     Pipeline completo para predecir camas disponibles con XGBoost
-    
+
     Args:
         hospital: Nombre del hospital a procesar
-        
+
     Returns:
         DataFrame con resultados de predicción o None si hay error
     """
@@ -48,7 +48,7 @@ def pipeline_final_mae_reducido(hospital: str, filtrado_limpio: pd.DataFrame, se
 
     # 6. Evaluación del modelo
     resultados = evaluar_modelo(mejor_modelo, X_test, y_test, df_modelo)
-    
+
     return resultados
 
 # Funciones auxiliares (manteniendo la secuencia original)
@@ -87,13 +87,13 @@ def dividir_datos(df: pd.DataFrame, features: list) -> Tuple[pd.DataFrame, pd.Da
 def entrenar_modelo_xgboost(X_train: pd.DataFrame, y_train: pd.Series) -> XGBRegressor:
     """Paso 5: Entrena modelo XGBoost con GridSearch"""
     print("🔧 Ajustando modelo con GridSearchCV...")
-    
+
     param_grid = {
         'n_estimators': [50, 100],
         'max_depth': [2, 3],
         'learning_rate': [0.05, 0.1]
     }
-    
+
     model = XGBRegressor(n_jobs=1, random_state=42)
     grid_search = GridSearchCV(
         estimator=model,
@@ -106,21 +106,21 @@ def entrenar_modelo_xgboost(X_train: pd.DataFrame, y_train: pd.Series) -> XGBReg
     print("📌 Mejores parámetros encontrados:", grid_search.best_params_)
     return grid_search.best_estimator_
 
-def evaluar_modelo(model: XGBRegressor, X_test: pd.DataFrame, 
+def evaluar_modelo(model: XGBRegressor, X_test: pd.DataFrame,
                   y_test: pd.Series, df_original: pd.DataFrame) -> pd.DataFrame:
     """Paso 6: Evalúa el modelo y genera resultados"""
     print("📊 Evaluando sobre el 20% final de los datos...")
     y_pred = model.predict(X_test)
-    
+
     # Cálculo de métricas
     mae = mean_absolute_error(y_test, y_pred)
     rmse = mean_squared_error(y_test, y_pred) ** 0.5
     error_pct = np.mean(np.abs((y_test.values - y_pred) / y_test.values)) * 100
-    
+
     print(f"✅ MAE (camas): {mae:.2f}")
     print(f"✅ RMSE (camas): {rmse:.2f}")
     print(f"📉 Error promedio porcentual: {error_pct:.2f}%")
-    
+
     # Resultados detallados
     return pd.DataFrame({
         'Fecha': df_original['Fecha'].iloc[-len(y_test):].values,
