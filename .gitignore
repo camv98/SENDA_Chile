@@ -172,3 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+#ignorar carpeta de demo}
+
+senda/demo_day
+/home/elias/code/camv98/SENDA_Chile/predicciones_seremis_con_marzo.csv
