@@ -14,6 +14,7 @@ import numpy as np
 import random
 from datetime import datetime, timedelta
 import time
+import requests
 
 
 
@@ -43,6 +44,19 @@ def load_hospital_data():
     return df_hospitales
 
 df_hospitales = load_hospital_data()
+
+def llamar_api_local(mes, seremi, hospital):
+
+    hospital_codificado = hospital.replace(" ", "%20")
+    url = f"http://127.0.0.1:8000/tu_endpoint?mes={mes}&seremi={seremi}&hospital={hospital_codificado}"
+    # Reemplaza /tu_endpoint con el endpoint correcto de tu API
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    # Lanza una excepción para códigos de error 4xx o 5xx
+    except requests.exceptions.RequestException as e:
+        return {"error": str(e)}
 
 
 def hacer_prediccion(seremi, hospital, mes_seleccionado):
@@ -91,6 +105,10 @@ def hacer_prediccion(seremi, hospital, mes_seleccionado):
         valor = base + estacionalidad + ruido
         valores.append(max(10, int(valor)))  # Asegurar mínimo 10 camas
 
+    year=2025
+    first_day = datetime(year, mes_numero, 1)
+    fecha_str = first_day.strftime("%Y-%m-%d")
+    valores[-1]=llamar_api_local(seremi, hospital, fecha_str)
     historico_12_meses = dict(zip(meses, valores))
 
     # 2. Generar datos para el mismo mes en 5 años anteriores
