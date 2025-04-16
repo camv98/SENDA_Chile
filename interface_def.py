@@ -592,7 +592,7 @@ def prediction_page():
                 <h2 style="font-size: 1.8rem;">{mensaje_lineas[0]}</h2>
                 <h1 style="font-size: 4rem; color: #00CC96; margin: 20px 0;">{mensaje_lineas[1]}</h1>
                 <h2 style="font-size: 1.8rem;">{mensaje_lineas[2]}</h2>
-                <p style="font-size: 0.8rem; margin-top: 10px;">URL de la API: {api_url}</p>
+                #<p style="font-size: 0.8rem; margin-top: 10px;">URL de la API: {api_url}</p>
             </div>
             """, unsafe_allow_html=True)
         else:
@@ -635,15 +635,6 @@ def prediction_page():
         """, unsafe_allow_html=True)
 
         # Información de selección
-        st.markdown(f"""
-        <div style="margin-top: 20px; padding: 15px; border-radius: 10px; background-color: rgba(248, 249, 250, 0.5);">
-            <p style="font-size: 1rem; margin: 5px 0;"><strong>SEREMI:</strong> {st.session_state.selected_seremi}</p>
-            <p style="font-size: 1rem; margin: 5px 0;"><strong>{"Servicio Salud" if st.session_state.selected_hospital == "Datos Generales Seremi" else "Hospital"}:</strong> {st.session_state.selected_hospital}</p>
-            <p style="font-size: 1rem; margin: 5px 0;"><strong>Mes:</strong> {st.session_state.selected_month}</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        # Añadir información de selección debajo del medidor
         st.markdown(f"""
         <div style="margin-top: 20px; padding: 15px; border-radius: 10px; background-color: rgba(248, 249, 250, 0.5);">
             <p style="font-size: 1rem; margin: 5px 0;"><strong>SEREMI:</strong> {st.session_state.selected_seremi}</p>
