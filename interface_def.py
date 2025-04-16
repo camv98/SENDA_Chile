@@ -321,7 +321,7 @@ def hacer_prediccion(seremi, hospital, mes_seleccionado):
 
     # Crear mensaje de predicción
     prediccion = round(list(historico_12_meses.values())[-1]) if historico_12_meses else 0
-    mensaje_prediccion = f"Para el mes de {mes_seleccionado}, se predice que:\n{prediccion}\nserá el número de camas disponibles"
+    mensaje_prediccion = f"Para el mes de {mes_seleccionado}, se predice que:\n{prediccion}\nserán el número de camas disponibles."
 
     return [
         historico_12_meses,
