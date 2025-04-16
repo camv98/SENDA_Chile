@@ -1,0 +1,583 @@
+,Nombre Establecimiento,Nombre SS/SEREMI,Nombre Nivel Cuidado
+0,Datos País,Datos País,Datos País
+1,Datos Servicio Salud,Arica,Datos Servicio Salud
+2,Datos Servicio Salud,Iquique,Datos Servicio Salud
+3,Datos Servicio Salud,Antofagasta,Datos Servicio Salud
+4,Hospital de Mejillones,Antofagasta,Datos Establecimiento
+5,Hospital de Mejillones,Antofagasta,401 - Área Médica Adulto Cuidados Básicos
+6,Datos Servicio Salud,Atacama,Datos Servicio Salud
+7,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,Datos Establecimiento
+8,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,330 - Área Pensionado
+9,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,401 - Área Médica Adulto Cuidados Básicos
+10,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,402 - Área Médica Adulto Cuidados Medios
+11,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,403 - Área Médico-Quirúrgico Cuidados Básicos
+12,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,404 - Área Médico-Quirúrgico Cuidados Medios
+13,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,406 - Área Cuidados Intermedios Adultos
+14,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,407 - Área Médica Pediátrica Cuidados Básicos
+15,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,408 - Área Médica Pediátrica Cuidados Medios
+16,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+17,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+18,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,413 - Área Neonatología Cuidados Básicos
+19,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,416 - Área Obstetricia
+20,Hospital Provincial del Huasco Monseñor Fernando Ariztía Ruiz (Vallenar),Atacama,418 - Área Psiquiatría Adulto Corta estadía
+21,Datos Servicio Salud,Coquimbo,Datos Servicio Salud
+22,Hospital San Juan de Dios (La Serena),Coquimbo,Datos Establecimiento
+23,Hospital San Juan de Dios (La Serena),Coquimbo,330 - Área Pensionado
+24,Hospital San Juan de Dios (La Serena),Coquimbo,401 - Área Médica Adulto Cuidados Básicos
+25,Hospital San Juan de Dios (La Serena),Coquimbo,403 - Área Médico-Quirúrgico Cuidados Básicos
+26,Hospital San Juan de Dios (La Serena),Coquimbo,405 - Área Cuidados Intensivos Adultos
+27,Hospital San Juan de Dios (La Serena),Coquimbo,406 - Área Cuidados Intermedios Adultos
+28,Hospital San Juan de Dios (La Serena),Coquimbo,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+29,Hospital San Juan de Dios (La Serena),Coquimbo,414 - Área Neonatología Cuidados Intensivos
+30,Hospital San Juan de Dios (La Serena),Coquimbo,415 - Área Neonatología Cuidados Intermedios
+31,Hospital San Juan de Dios (La Serena),Coquimbo,416 - Área Obstetricia
+32,Hospital San Juan de Dios (La Serena),Coquimbo,412 - Área Cuidados Intermedios Pediátricos
+33,Hospital San Pablo (Coquimbo),Coquimbo,Datos Establecimiento
+34,Hospital San Pablo (Coquimbo),Coquimbo,330 - Área Pensionado
+35,Hospital San Pablo (Coquimbo),Coquimbo,401 - Área Médica Adulto Cuidados Básicos
+36,Hospital San Pablo (Coquimbo),Coquimbo,403 - Área Médico-Quirúrgico Cuidados Básicos
+37,Hospital San Pablo (Coquimbo),Coquimbo,404 - Área Médico-Quirúrgico Cuidados Medios
+38,Hospital San Pablo (Coquimbo),Coquimbo,405 - Área Cuidados Intensivos Adultos
+39,Hospital San Pablo (Coquimbo),Coquimbo,406 - Área Cuidados Intermedios Adultos
+40,Hospital San Pablo (Coquimbo),Coquimbo,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+41,Hospital San Pablo (Coquimbo),Coquimbo,411 - Área Cuidados Intensivos Pediátricos
+42,Hospital San Pablo (Coquimbo),Coquimbo,412 - Área Cuidados Intermedios Pediátricos
+43,Hospital San Pablo (Coquimbo),Coquimbo,413 - Área Neonatología Cuidados Básicos
+44,Hospital San Pablo (Coquimbo),Coquimbo,416 - Área Obstetricia
+45,Hospital San Pablo (Coquimbo),Coquimbo,418 - Área Psiquiatría Adulto Corta estadía
+46,Hospital de Salamanca,Coquimbo,Datos Establecimiento
+47,Hospital de Salamanca,Coquimbo,330 - Área Pensionado
+48,Hospital de Salamanca,Coquimbo,401 - Área Médica Adulto Cuidados Básicos
+49,Hospital de Salamanca,Coquimbo,407 - Área Médica Pediátrica Cuidados Básicos
+50,Hospital de Salamanca,Coquimbo,416 - Área Obstetricia
+51,Hospital San Juan de Dios (Combarbalá),Coquimbo,Datos Establecimiento
+52,Hospital San Juan de Dios (Combarbalá),Coquimbo,330 - Área Pensionado
+53,Hospital San Juan de Dios (Combarbalá),Coquimbo,401 - Área Médica Adulto Cuidados Básicos
+54,Hospital San Juan de Dios (Combarbalá),Coquimbo,407 - Área Médica Pediátrica Cuidados Básicos
+55,Hospital San Juan de Dios (Combarbalá),Coquimbo,416 - Área Obstetricia
+56,Hospital San Pedro (Los Vilos),Coquimbo,Datos Establecimiento
+57,Hospital San Pedro (Los Vilos),Coquimbo,330 - Área Pensionado
+58,Hospital San Pedro (Los Vilos),Coquimbo,401 - Área Médica Adulto Cuidados Básicos
+59,Hospital San Pedro (Los Vilos),Coquimbo,407 - Área Médica Pediátrica Cuidados Básicos
+60,Hospital San Pedro (Los Vilos),Coquimbo,416 - Área Obstetricia
+61,Datos Servicio Salud,Valparaíso San Antonio,Datos Servicio Salud
+62,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,Datos Establecimiento
+63,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,330 - Área Pensionado
+64,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,401 - Área Médica Adulto Cuidados Básicos
+65,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,402 - Área Médica Adulto Cuidados Medios
+66,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,403 - Área Médico-Quirúrgico Cuidados Básicos
+67,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,404 - Área Médico-Quirúrgico Cuidados Medios
+68,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,405 - Área Cuidados Intensivos Adultos
+69,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,406 - Área Cuidados Intermedios Adultos
+70,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,407 - Área Médica Pediátrica Cuidados Básicos
+71,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,408 - Área Médica Pediátrica Cuidados Medios
+72,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+73,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+74,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,411 - Área Cuidados Intensivos Pediátricos
+75,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,412 - Área Cuidados Intermedios Pediátricos
+76,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,413 - Área Neonatología Cuidados Básicos
+77,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,414 - Área Neonatología Cuidados Intensivos
+78,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,415 - Área Neonatología Cuidados Intermedios
+79,Hospital Carlos Van Buren (Valparaíso),Valparaíso San Antonio,416 - Área Obstetricia
+80,Hospital San José (Casablanca),Valparaíso San Antonio,Datos Establecimiento
+81,Hospital San José (Casablanca),Valparaíso San Antonio,401 - Área Médica Adulto Cuidados Básicos
+82,Datos Servicio Salud,Viña del Mar Quillota,Datos Servicio Salud
+83,Hospital de Quilpué,Viña del Mar Quillota,Datos Establecimiento
+84,Hospital de Quilpué,Viña del Mar Quillota,403 - Área Médico-Quirúrgico Cuidados Básicos
+85,Hospital de Quilpué,Viña del Mar Quillota,404 - Área Médico-Quirúrgico Cuidados Medios
+86,Hospital de Quilpué,Viña del Mar Quillota,405 - Área Cuidados Intensivos Adultos
+87,Hospital de Quilpué,Viña del Mar Quillota,406 - Área Cuidados Intermedios Adultos
+88,Hospital de Quilpué,Viña del Mar Quillota,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+89,Hospital de Quilpué,Viña del Mar Quillota,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+90,Hospital de Quilpué,Viña del Mar Quillota,413 - Área Neonatología Cuidados Básicos
+91,Hospital de Quilpué,Viña del Mar Quillota,416 - Área Obstetricia
+92,Hospital San Agustín (La Ligua),Viña del Mar Quillota,Datos Establecimiento
+93,Hospital San Agustín (La Ligua),Viña del Mar Quillota,401 - Área Médica Adulto Cuidados Básicos
+94,Hospital San Agustín (La Ligua),Viña del Mar Quillota,407 - Área Médica Pediátrica Cuidados Básicos
+95,Hospital San Agustín (La Ligua),Viña del Mar Quillota,416 - Área Obstetricia
+96,Hospital Adriana Cousiño (Quintero),Viña del Mar Quillota,Datos Establecimiento
+97,Hospital Adriana Cousiño (Quintero),Viña del Mar Quillota,403 - Área Médico-Quirúrgico Cuidados Básicos
+98,Hospital Adriana Cousiño (Quintero),Viña del Mar Quillota,407 - Área Médica Pediátrica Cuidados Básicos
+99,Hospital Adriana Cousiño (Quintero),Viña del Mar Quillota,416 - Área Obstetricia
+100,"Hospital Juana Ross de Edwards (Peñablanca, Villa Alemana)",Viña del Mar Quillota,Datos Establecimiento
+101,"Hospital Juana Ross de Edwards (Peñablanca, Villa Alemana)",Viña del Mar Quillota,403 - Área Médico-Quirúrgico Cuidados Básicos
+102,Hospital Centro Geriátrico Paz de la Tarde (Limache),Viña del Mar Quillota,Datos Establecimiento
+103,Hospital Centro Geriátrico Paz de la Tarde (Limache),Viña del Mar Quillota,401 - Área Médica Adulto Cuidados Básicos
+104,Datos Servicio Salud,Aconcagua,Datos Servicio Salud
+105,Hospital San Juan de Dios (Los Andes),Aconcagua,Datos Establecimiento
+106,Hospital San Juan de Dios (Los Andes),Aconcagua,330 - Área Pensionado
+107,Hospital San Juan de Dios (Los Andes),Aconcagua,403 - Área Médico-Quirúrgico Cuidados Básicos
+108,Hospital San Juan de Dios (Los Andes),Aconcagua,404 - Área Médico-Quirúrgico Cuidados Medios
+109,Hospital San Juan de Dios (Los Andes),Aconcagua,406 - Área Cuidados Intermedios Adultos
+110,Hospital San Juan de Dios (Los Andes),Aconcagua,407 - Área Médica Pediátrica Cuidados Básicos
+111,Hospital San Juan de Dios (Los Andes),Aconcagua,413 - Área Neonatología Cuidados Básicos
+112,Hospital San Juan de Dios (Los Andes),Aconcagua,416 - Área Obstetricia
+113,Hospital San Francisco (Llaillay),Aconcagua,Datos Establecimiento
+114,Hospital San Francisco (Llaillay),Aconcagua,330 - Área Pensionado
+115,Hospital San Francisco (Llaillay),Aconcagua,401 - Área Médica Adulto Cuidados Básicos
+116,Hospital San Francisco (Llaillay),Aconcagua,407 - Área Médica Pediátrica Cuidados Básicos
+117,Hospital San Francisco (Llaillay),Aconcagua,416 - Área Obstetricia
+118,Hospital San Antonio (Putaendo),Aconcagua,Datos Establecimiento
+119,Hospital San Antonio (Putaendo),Aconcagua,401 - Área Médica Adulto Cuidados Básicos
+120,Datos Servicio Salud,Metropolitano Norte,Datos Servicio Salud
+121,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,Datos Establecimiento
+122,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,330 - Área Pensionado
+123,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,403 - Área Médico-Quirúrgico Cuidados Básicos
+124,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,404 - Área Médico-Quirúrgico Cuidados Medios
+125,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,405 - Área Cuidados Intensivos Adultos
+126,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,406 - Área Cuidados Intermedios Adultos
+127,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,413 - Área Neonatología Cuidados Básicos
+128,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,414 - Área Neonatología Cuidados Intensivos
+129,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,415 - Área Neonatología Cuidados Intermedios
+130,"Complejo Hospitalario San José (Santiago, Independencia)",Metropolitano Norte,416 - Área Obstetricia
+131,Datos Servicio Salud,Metropolitano Occidente,Datos Servicio Salud
+132,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,Datos Establecimiento
+133,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,330 - Área Pensionado
+134,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,401 - Área Médica Adulto Cuidados Básicos
+135,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,402 - Área Médica Adulto Cuidados Medios
+136,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,403 - Área Médico-Quirúrgico Cuidados Básicos
+137,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,405 - Área Cuidados Intensivos Adultos
+138,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,406 - Área Cuidados Intermedios Adultos
+139,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,407 - Área Médica Pediátrica Cuidados Básicos
+140,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,411 - Área Cuidados Intensivos Pediátricos
+141,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,412 - Área Cuidados Intermedios Pediátricos
+142,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,413 - Área Neonatología Cuidados Básicos
+143,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,414 - Área Neonatología Cuidados Intensivos
+144,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,415 - Área Neonatología Cuidados Intermedios
+145,"Hospital San Juan de Dios (Santiago, Santiago)",Metropolitano Occidente,416 - Área Obstetricia
+146,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,Datos Establecimiento
+147,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,330 - Área Pensionado
+148,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,401 - Área Médica Adulto Cuidados Básicos
+149,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,402 - Área Médica Adulto Cuidados Medios
+150,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,403 - Área Médico-Quirúrgico Cuidados Básicos
+151,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,405 - Área Cuidados Intensivos Adultos
+152,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,406 - Área Cuidados Intermedios Adultos
+153,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,407 - Área Médica Pediátrica Cuidados Básicos
+154,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,413 - Área Neonatología Cuidados Básicos
+155,Hospital Adalberto Steeger (Talagante),Metropolitano Occidente,416 - Área Obstetricia
+156,Hospital de Peñaflor,Metropolitano Occidente,Datos Establecimiento
+157,Hospital de Peñaflor,Metropolitano Occidente,330 - Área Pensionado
+158,Hospital de Peñaflor,Metropolitano Occidente,402 - Área Médica Adulto Cuidados Medios
+159,Hospital de Peñaflor,Metropolitano Occidente,403 - Área Médico-Quirúrgico Cuidados Básicos
+160,Hospital de Peñaflor,Metropolitano Occidente,404 - Área Médico-Quirúrgico Cuidados Medios
+161,Hospital de Peñaflor,Metropolitano Occidente,407 - Área Médica Pediátrica Cuidados Básicos
+162,Hospital de Peñaflor,Metropolitano Occidente,416 - Área Obstetricia
+163,Hospital San José (Melipilla),Metropolitano Occidente,Datos Establecimiento
+164,Hospital San José (Melipilla),Metropolitano Occidente,330 - Área Pensionado
+165,Hospital San José (Melipilla),Metropolitano Occidente,403 - Área Médico-Quirúrgico Cuidados Básicos
+166,Hospital San José (Melipilla),Metropolitano Occidente,404 - Área Médico-Quirúrgico Cuidados Medios
+167,Hospital San José (Melipilla),Metropolitano Occidente,406 - Área Cuidados Intermedios Adultos
+168,Hospital San José (Melipilla),Metropolitano Occidente,407 - Área Médica Pediátrica Cuidados Básicos
+169,Hospital San José (Melipilla),Metropolitano Occidente,413 - Área Neonatología Cuidados Básicos
+170,Hospital San José (Melipilla),Metropolitano Occidente,416 - Área Obstetricia
+171,Hospital de Curacaví,Metropolitano Occidente,Datos Establecimiento
+172,Hospital de Curacaví,Metropolitano Occidente,401 - Área Médica Adulto Cuidados Básicos
+173,Hospital de Curacaví,Metropolitano Occidente,403 - Área Médico-Quirúrgico Cuidados Básicos
+174,Datos Servicio Salud,Metropolitano Central,Datos Servicio Salud
+175,Datos Servicio Salud,Metropolitano Oriente,Datos Servicio Salud
+176,Instituto Nacional de Enfermedades Respiratorias y Cirugía Torácica,Metropolitano Oriente,Datos Establecimiento
+177,Instituto Nacional de Enfermedades Respiratorias y Cirugía Torácica,Metropolitano Oriente,403 - Área Médico-Quirúrgico Cuidados Básicos
+178,Instituto Nacional de Enfermedades Respiratorias y Cirugía Torácica,Metropolitano Oriente,405 - Área Cuidados Intensivos Adultos
+179,Instituto Nacional de Enfermedades Respiratorias y Cirugía Torácica,Metropolitano Oriente,406 - Área Cuidados Intermedios Adultos
+180,Instituto Nacional de Rehabilitación Infantil Presidente Pedro Aguirre Cerda,Metropolitano Oriente,Datos Establecimiento
+181,Instituto Nacional de Rehabilitación Infantil Presidente Pedro Aguirre Cerda,Metropolitano Oriente,407 - Área Médica Pediátrica Cuidados Básicos
+182,Instituto Nacional de Rehabilitación Infantil Presidente Pedro Aguirre Cerda,Metropolitano Oriente,412 - Área Cuidados Intermedios Pediátricos
+183,Instituto Nacional Geriátrico Presidente Eduardo Frei Montalva,Metropolitano Oriente,Datos Establecimiento
+184,Instituto Nacional Geriátrico Presidente Eduardo Frei Montalva,Metropolitano Oriente,402 - Área Médica Adulto Cuidados Medios
+185,Hospital Hanga Roa (Isla De Pascua),Metropolitano Oriente,Datos Establecimiento
+186,Hospital Hanga Roa (Isla De Pascua),Metropolitano Oriente,403 - Área Médico-Quirúrgico Cuidados Básicos
+187,Hospital Hanga Roa (Isla De Pascua),Metropolitano Oriente,413 - Área Neonatología Cuidados Básicos
+188,Datos Servicio Salud,Metropolitano Sur,Datos Servicio Salud
+189,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,Datos Establecimiento
+190,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,330 - Área Pensionado
+191,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,401 - Área Médica Adulto Cuidados Básicos
+192,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,402 - Área Médica Adulto Cuidados Medios
+193,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,403 - Área Médico-Quirúrgico Cuidados Básicos
+194,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,404 - Área Médico-Quirúrgico Cuidados Medios
+195,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,405 - Área Cuidados Intensivos Adultos
+196,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,406 - Área Cuidados Intermedios Adultos
+197,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,413 - Área Neonatología Cuidados Básicos
+198,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,414 - Área Neonatología Cuidados Intensivos
+199,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,415 - Área Neonatología Cuidados Intermedios
+200,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,416 - Área Obstetricia
+201,"Hospital Barros Luco Trudeau (Santiago, San Miguel)",Metropolitano Sur,418 - Área Psiquiatría Adulto Corta estadía
+202,Hospital San Luis (Buin),Metropolitano Sur,Datos Establecimiento
+203,Hospital San Luis (Buin),Metropolitano Sur,330 - Área Pensionado
+204,Hospital San Luis (Buin),Metropolitano Sur,401 - Área Médica Adulto Cuidados Básicos
+205,Hospital San Luis (Buin),Metropolitano Sur,402 - Área Médica Adulto Cuidados Medios
+206,Hospital San Luis (Buin),Metropolitano Sur,403 - Área Médico-Quirúrgico Cuidados Básicos
+207,Hospital San Luis (Buin),Metropolitano Sur,404 - Área Médico-Quirúrgico Cuidados Medios
+208,Hospital San Luis (Buin),Metropolitano Sur,407 - Área Médica Pediátrica Cuidados Básicos
+209,Hospital San Luis (Buin),Metropolitano Sur,408 - Área Médica Pediátrica Cuidados Medios
+210,Hospital San Luis (Buin),Metropolitano Sur,413 - Área Neonatología Cuidados Básicos
+211,Hospital San Luis (Buin),Metropolitano Sur,416 - Área Obstetricia
+212,"Hospital Psiquiátrico El Peral (Santiago, Puente Alto)",Metropolitano Sur,Datos Establecimiento
+213,"Hospital Psiquiátrico El Peral (Santiago, Puente Alto)",Metropolitano Sur,401 - Área Médica Adulto Cuidados Básicos
+214,"Hospital Psiquiátrico El Peral (Santiago, Puente Alto)",Metropolitano Sur,419 - Área Psiquiatría Adulto Mediana estadía
+215,"Hospital Psiquiátrico El Peral (Santiago, Puente Alto)",Metropolitano Sur,420 - Área Psiquiatría Adulto Larga estadía
+216,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,Datos Establecimiento
+217,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,330 - Área Pensionado
+218,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,401 - Área Médica Adulto Cuidados Básicos
+219,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,402 - Área Médica Adulto Cuidados Medios
+220,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,403 - Área Médico-Quirúrgico Cuidados Básicos
+221,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,404 - Área Médico-Quirúrgico Cuidados Medios
+222,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,405 - Área Cuidados Intensivos Adultos
+223,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,406 - Área Cuidados Intermedios Adultos
+224,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,407 - Área Médica Pediátrica Cuidados Básicos
+225,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,408 - Área Médica Pediátrica Cuidados Medios
+226,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,413 - Área Neonatología Cuidados Básicos
+227,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,414 - Área Neonatología Cuidados Intensivos
+228,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,415 - Área Neonatología Cuidados Intermedios
+229,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,416 - Área Obstetricia
+230,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,418 - Área Psiquiatría Adulto Corta estadía
+231,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,412 - Área Cuidados Intermedios Pediátricos
+232,"Hospital El Pino (Santiago, San Bernardo)",Metropolitano Sur,411 - Área Cuidados Intensivos Pediátricos
+233,Datos Servicio Salud,Metropolitano Sur Oriente,Datos Servicio Salud
+234,Hospital San José de Maipo,Metropolitano Sur Oriente,Datos Establecimiento
+235,Hospital San José de Maipo,Metropolitano Sur Oriente,401 - Área Médica Adulto Cuidados Básicos
+236,Hospital San José de Maipo,Metropolitano Sur Oriente,402 - Área Médica Adulto Cuidados Medios
+237,Hospital San José de Maipo,Metropolitano Sur Oriente,407 - Área Médica Pediátrica Cuidados Básicos
+238,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,Datos Establecimiento
+239,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,403 - Área Médico-Quirúrgico Cuidados Básicos
+240,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,404 - Área Médico-Quirúrgico Cuidados Medios
+241,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,405 - Área Cuidados Intensivos Adultos
+242,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,406 - Área Cuidados Intermedios Adultos
+243,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,407 - Área Médica Pediátrica Cuidados Básicos
+244,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,411 - Área Cuidados Intensivos Pediátricos
+245,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,412 - Área Cuidados Intermedios Pediátricos
+246,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,413 - Área Neonatología Cuidados Básicos
+247,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,414 - Área Neonatología Cuidados Intensivos
+248,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,415 - Área Neonatología Cuidados Intermedios
+249,Hospital Padre Alberto Hurtado (San Ramón),Metropolitano Sur Oriente,416 - Área Obstetricia
+250,Datos Servicio Salud,Del Libertador B.O Higgins,Datos Servicio Salud
+251,Hospital San Vicente de Tagua-Tagua,Del Libertador B.O Higgins,Datos Establecimiento
+252,Hospital San Vicente de Tagua-Tagua,Del Libertador B.O Higgins,330 - Área Pensionado
+253,Hospital San Vicente de Tagua-Tagua,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+254,Hospital San Vicente de Tagua-Tagua,Del Libertador B.O Higgins,404 - Área Médico-Quirúrgico Cuidados Medios
+255,Hospital San Vicente de Tagua-Tagua,Del Libertador B.O Higgins,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+256,Hospital San Vicente de Tagua-Tagua,Del Libertador B.O Higgins,416 - Área Obstetricia
+257,Hospital de Pichidegua,Del Libertador B.O Higgins,Datos Establecimiento
+258,Hospital de Pichidegua,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+259,Hospital de Nancagua,Del Libertador B.O Higgins,Datos Establecimiento
+260,Hospital de Nancagua,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+261,Hospital de Marchigüe,Del Libertador B.O Higgins,Datos Establecimiento
+262,Hospital de Marchigüe,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+263,Hospital de Pichilemu,Del Libertador B.O Higgins,Datos Establecimiento
+264,Hospital de Pichilemu,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+265,Hospital de Lolol,Del Libertador B.O Higgins,Datos Establecimiento
+266,Hospital de Lolol,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+267,Hospital de Litueche,Del Libertador B.O Higgins,Datos Establecimiento
+268,Hospital de Litueche,Del Libertador B.O Higgins,403 - Área Médico-Quirúrgico Cuidados Básicos
+269,Datos Servicio Salud,Del Maule,Datos Servicio Salud
+270,Hospital San Juan de Dios (Curicó),Del Maule,Datos Establecimiento
+271,Hospital San Juan de Dios (Curicó),Del Maule,330 - Área Pensionado
+272,Hospital San Juan de Dios (Curicó),Del Maule,403 - Área Médico-Quirúrgico Cuidados Básicos
+273,Hospital San Juan de Dios (Curicó),Del Maule,404 - Área Médico-Quirúrgico Cuidados Medios
+274,Hospital San Juan de Dios (Curicó),Del Maule,405 - Área Cuidados Intensivos Adultos
+275,Hospital San Juan de Dios (Curicó),Del Maule,406 - Área Cuidados Intermedios Adultos
+276,Hospital San Juan de Dios (Curicó),Del Maule,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+277,Hospital San Juan de Dios (Curicó),Del Maule,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+278,Hospital San Juan de Dios (Curicó),Del Maule,413 - Área Neonatología Cuidados Básicos
+279,Hospital San Juan de Dios (Curicó),Del Maule,415 - Área Neonatología Cuidados Intermedios
+280,Hospital San Juan de Dios (Curicó),Del Maule,416 - Área Obstetricia
+281,Hospital de Teno,Del Maule,Datos Establecimiento
+282,Hospital de Teno,Del Maule,401 - Área Médica Adulto Cuidados Básicos
+283,Hospital de Teno,Del Maule,407 - Área Médica Pediátrica Cuidados Básicos
+284,Hospital de Molina,Del Maule,Datos Establecimiento
+285,Hospital de Molina,Del Maule,401 - Área Médica Adulto Cuidados Básicos
+286,Hospital de Molina,Del Maule,407 - Área Médica Pediátrica Cuidados Básicos
+287,Hospital de Hualañé,Del Maule,Datos Establecimiento
+288,Hospital de Hualañé,Del Maule,401 - Área Médica Adulto Cuidados Básicos
+289,Hospital de Hualañé,Del Maule,407 - Área Médica Pediátrica Cuidados Básicos
+290,Hospital de Curepto,Del Maule,Datos Establecimiento
+291,Hospital de Curepto,Del Maule,401 - Área Médica Adulto Cuidados Básicos
+292,Hospital de Curepto,Del Maule,407 - Área Médica Pediátrica Cuidados Básicos
+293,Hospital de Constitución,Del Maule,Datos Establecimiento
+294,Hospital de Constitución,Del Maule,330 - Área Pensionado
+295,Hospital de Constitución,Del Maule,403 - Área Médico-Quirúrgico Cuidados Básicos
+296,Hospital de Constitución,Del Maule,407 - Área Médica Pediátrica Cuidados Básicos
+297,Hospital de Constitución,Del Maule,416 - Área Obstetricia
+298,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,Datos Establecimiento
+299,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,330 - Área Pensionado
+300,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,403 - Área Médico-Quirúrgico Cuidados Básicos
+301,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,404 - Área Médico-Quirúrgico Cuidados Medios
+302,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,405 - Área Cuidados Intensivos Adultos
+303,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,406 - Área Cuidados Intermedios Adultos
+304,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+305,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,412 - Área Cuidados Intermedios Pediátricos
+306,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,413 - Área Neonatología Cuidados Básicos
+307,Hospital Presidente Carlos Ibáñez del Campo (Linares),Del Maule,416 - Área Obstetricia
+308,Hospital San José (Parral),Del Maule,Datos Establecimiento
+309,Hospital San José (Parral),Del Maule,330 - Área Pensionado
+310,Hospital San José (Parral),Del Maule,403 - Área Médico-Quirúrgico Cuidados Básicos
+311,Hospital San José (Parral),Del Maule,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+312,Hospital San José (Parral),Del Maule,416 - Área Obstetricia
+313,Hospital San Juan de Dios (Cauquenes),Del Maule,Datos Establecimiento
+314,Hospital San Juan de Dios (Cauquenes),Del Maule,330 - Área Pensionado
+315,Hospital San Juan de Dios (Cauquenes),Del Maule,403 - Área Médico-Quirúrgico Cuidados Básicos
+316,Hospital San Juan de Dios (Cauquenes),Del Maule,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+317,Hospital San Juan de Dios (Cauquenes),Del Maule,416 - Área Obstetricia
+318,Datos Servicio Salud,Ñuble,Datos Servicio Salud
+319,Hospital Clínico Herminda Martín (Chillán),Ñuble,Datos Establecimiento
+320,Hospital Clínico Herminda Martín (Chillán),Ñuble,330 - Área Pensionado
+321,Hospital Clínico Herminda Martín (Chillán),Ñuble,401 - Área Médica Adulto Cuidados Básicos
+322,Hospital Clínico Herminda Martín (Chillán),Ñuble,402 - Área Médica Adulto Cuidados Medios
+323,Hospital Clínico Herminda Martín (Chillán),Ñuble,403 - Área Médico-Quirúrgico Cuidados Básicos
+324,Hospital Clínico Herminda Martín (Chillán),Ñuble,404 - Área Médico-Quirúrgico Cuidados Medios
+325,Hospital Clínico Herminda Martín (Chillán),Ñuble,405 - Área Cuidados Intensivos Adultos
+326,Hospital Clínico Herminda Martín (Chillán),Ñuble,406 - Área Cuidados Intermedios Adultos
+327,Hospital Clínico Herminda Martín (Chillán),Ñuble,407 - Área Médica Pediátrica Cuidados Básicos
+328,Hospital Clínico Herminda Martín (Chillán),Ñuble,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+329,Hospital Clínico Herminda Martín (Chillán),Ñuble,411 - Área Cuidados Intensivos Pediátricos
+330,Hospital Clínico Herminda Martín (Chillán),Ñuble,412 - Área Cuidados Intermedios Pediátricos
+331,Hospital Clínico Herminda Martín (Chillán),Ñuble,413 - Área Neonatología Cuidados Básicos
+332,Hospital Clínico Herminda Martín (Chillán),Ñuble,414 - Área Neonatología Cuidados Intensivos
+333,Hospital Clínico Herminda Martín (Chillán),Ñuble,415 - Área Neonatología Cuidados Intermedios
+334,Hospital Clínico Herminda Martín (Chillán),Ñuble,416 - Área Obstetricia
+335,Hospital Clínico Herminda Martín (Chillán),Ñuble,418 - Área Psiquiatría Adulto Corta estadía
+336,Hospital Comunitario de Salud Familiar de Bulnes,Ñuble,Datos Establecimiento
+337,Hospital Comunitario de Salud Familiar de Bulnes,Ñuble,403 - Área Médico-Quirúrgico Cuidados Básicos
+338,Hospital Comunitario de Salud Familiar de Bulnes,Ñuble,407 - Área Médica Pediátrica Cuidados Básicos
+339,Hospital Comunitario de Salud Familiar de Bulnes,Ñuble,416 - Área Obstetricia
+340,Hospital Comunitario de Salud Familiar Pedro Morales Campos (Yungay),Ñuble,Datos Establecimiento
+341,Hospital Comunitario de Salud Familiar Pedro Morales Campos (Yungay),Ñuble,403 - Área Médico-Quirúrgico Cuidados Básicos
+342,Hospital Comunitario de Salud Familiar Pedro Morales Campos (Yungay),Ñuble,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+343,Hospital Comunitario de Salud Familiar Pedro Morales Campos (Yungay),Ñuble,416 - Área Obstetricia
+344,Hospital Comunitario de Salud Familiar de Quirihue,Ñuble,Datos Establecimiento
+345,Hospital Comunitario de Salud Familiar de Quirihue,Ñuble,330 - Área Pensionado
+346,Hospital Comunitario de Salud Familiar de Quirihue,Ñuble,403 - Área Médico-Quirúrgico Cuidados Básicos
+347,Hospital Comunitario de Salud Familiar de Quirihue,Ñuble,407 - Área Médica Pediátrica Cuidados Básicos
+348,Hospital Comunitario de Salud Familiar de Quirihue,Ñuble,416 - Área Obstetricia
+349,Hospital Comunitario de Salud Familiar de Quirihue,Ñuble,427 - Área Sociosanitaria Adulto
+350,Hospital Comunitario de Salud Familiar de El Carmen,Ñuble,Datos Establecimiento
+351,Hospital Comunitario de Salud Familiar de El Carmen,Ñuble,403 - Área Médico-Quirúrgico Cuidados Básicos
+352,Hospital Comunitario de Salud Familiar de El Carmen,Ñuble,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+353,Hospital Comunitario de Salud Familiar de El Carmen,Ñuble,416 - Área Obstetricia
+354,Hospital Comunitario de Salud Familiar de El Carmen,Ñuble,427 - Área Sociosanitaria Adulto
+355,Datos Servicio Salud,Concepción,Datos Servicio Salud
+356,Hospital Traumatológico (Concepción),Concepción,Datos Establecimiento
+357,Hospital Traumatológico (Concepción),Concepción,330 - Área Pensionado
+358,Hospital Traumatológico (Concepción),Concepción,403 - Área Médico-Quirúrgico Cuidados Básicos
+359,Hospital Traumatológico (Concepción),Concepción,406 - Área Cuidados Intermedios Adultos
+360,Hospital San José (Coronel),Concepción,Datos Establecimiento
+361,Hospital San José (Coronel),Concepción,401 - Área Médica Adulto Cuidados Básicos
+362,Hospital San José (Coronel),Concepción,402 - Área Médica Adulto Cuidados Medios
+363,Hospital San José (Coronel),Concepción,403 - Área Médico-Quirúrgico Cuidados Básicos
+364,Hospital San José (Coronel),Concepción,407 - Área Médica Pediátrica Cuidados Básicos
+365,Hospital San José (Coronel),Concepción,413 - Área Neonatología Cuidados Básicos
+366,Hospital San José (Coronel),Concepción,416 - Área Obstetricia
+367,Hospital de Lota,Concepción,Datos Establecimiento
+368,Hospital de Lota,Concepción,401 - Área Médica Adulto Cuidados Básicos
+369,Hospital de Lota,Concepción,403 - Área Médico-Quirúrgico Cuidados Básicos
+370,Hospital de Lota,Concepción,407 - Área Médica Pediátrica Cuidados Básicos
+371,Hospital de Lota,Concepción,413 - Área Neonatología Cuidados Básicos
+372,Hospital de Lota,Concepción,416 - Área Obstetricia
+373,Hospital Clorinda Avello (Santa Juana),Concepción,Datos Establecimiento
+374,Hospital Clorinda Avello (Santa Juana),Concepción,401 - Área Médica Adulto Cuidados Básicos
+375,Hospital Clorinda Avello (Santa Juana),Concepción,407 - Área Médica Pediátrica Cuidados Básicos
+376,Hospital Clorinda Avello (Santa Juana),Concepción,416 - Área Obstetricia
+377,Datos Servicio Salud,Talcahuano,Datos Servicio Salud
+378,Hospital Las Higueras (Talcahuano),Talcahuano,Datos Establecimiento
+379,Hospital Las Higueras (Talcahuano),Talcahuano,330 - Área Pensionado
+380,Hospital Las Higueras (Talcahuano),Talcahuano,401 - Área Médica Adulto Cuidados Básicos
+381,Hospital Las Higueras (Talcahuano),Talcahuano,403 - Área Médico-Quirúrgico Cuidados Básicos
+382,Hospital Las Higueras (Talcahuano),Talcahuano,405 - Área Cuidados Intensivos Adultos
+383,Hospital Las Higueras (Talcahuano),Talcahuano,406 - Área Cuidados Intermedios Adultos
+384,Hospital Las Higueras (Talcahuano),Talcahuano,407 - Área Médica Pediátrica Cuidados Básicos
+385,Hospital Las Higueras (Talcahuano),Talcahuano,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+386,Hospital Las Higueras (Talcahuano),Talcahuano,411 - Área Cuidados Intensivos Pediátricos
+387,Hospital Las Higueras (Talcahuano),Talcahuano,412 - Área Cuidados Intermedios Pediátricos
+388,Hospital Las Higueras (Talcahuano),Talcahuano,413 - Área Neonatología Cuidados Básicos
+389,Hospital Las Higueras (Talcahuano),Talcahuano,414 - Área Neonatología Cuidados Intensivos
+390,Hospital Las Higueras (Talcahuano),Talcahuano,415 - Área Neonatología Cuidados Intermedios
+391,Hospital Las Higueras (Talcahuano),Talcahuano,416 - Área Obstetricia
+392,Hospital Las Higueras (Talcahuano),Talcahuano,418 - Área Psiquiatría Adulto Corta estadía
+393,Hospital de Tomé,Talcahuano,Datos Establecimiento
+394,Hospital de Tomé,Talcahuano,330 - Área Pensionado
+395,Hospital de Tomé,Talcahuano,401 - Área Médica Adulto Cuidados Básicos
+396,Hospital de Tomé,Talcahuano,403 - Área Médico-Quirúrgico Cuidados Básicos
+397,Hospital de Tomé,Talcahuano,406 - Área Cuidados Intermedios Adultos
+398,Hospital de Tomé,Talcahuano,407 - Área Médica Pediátrica Cuidados Básicos
+399,Hospital de Tomé,Talcahuano,416 - Área Obstetricia
+400,Datos Servicio Salud,Biobío,Datos Servicio Salud
+401,Datos Servicio Salud,Araucanía Sur,Datos Servicio Salud
+402,Hospital de Galvarino,Araucanía Sur,Datos Establecimiento
+403,Hospital de Galvarino,Araucanía Sur,401 - Área Médica Adulto Cuidados Básicos
+404,Hospital de Galvarino,Araucanía Sur,407 - Área Médica Pediátrica Cuidados Básicos
+405,Hospital de Galvarino,Araucanía Sur,416 - Área Obstetricia
+406,Hospital de Galvarino,Araucanía Sur,427 - Área Sociosanitaria Adulto
+407,Hospital de Vilcún,Araucanía Sur,Datos Establecimiento
+408,Hospital de Vilcún,Araucanía Sur,401 - Área Médica Adulto Cuidados Básicos
+409,Hospital de Vilcún,Araucanía Sur,407 - Área Médica Pediátrica Cuidados Básicos
+410,Hospital de Vilcún,Araucanía Sur,416 - Área Obstetricia
+411,Hospital de Vilcún,Araucanía Sur,427 - Área Sociosanitaria Adulto
+412,Hospital de Carahue,Araucanía Sur,Datos Establecimiento
+413,Hospital de Carahue,Araucanía Sur,401 - Área Médica Adulto Cuidados Básicos
+414,Hospital de Carahue,Araucanía Sur,407 - Área Médica Pediátrica Cuidados Básicos
+415,Hospital de Carahue,Araucanía Sur,416 - Área Obstetricia
+416,Hospital de Carahue,Araucanía Sur,427 - Área Sociosanitaria Adulto
+417,Hospital de Pitrufquén,Araucanía Sur,Datos Establecimiento
+418,Hospital de Pitrufquén,Araucanía Sur,403 - Área Médico-Quirúrgico Cuidados Básicos
+419,Hospital de Pitrufquén,Araucanía Sur,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+420,Hospital de Pitrufquén,Araucanía Sur,416 - Área Obstetricia
+421,Hospital de Toltén,Araucanía Sur,Datos Establecimiento
+422,Hospital de Toltén,Araucanía Sur,401 - Área Médica Adulto Cuidados Básicos
+423,Hospital de Toltén,Araucanía Sur,407 - Área Médica Pediátrica Cuidados Básicos
+424,Hospital de Toltén,Araucanía Sur,416 - Área Obstetricia
+425,Hospital de Toltén,Araucanía Sur,427 - Área Sociosanitaria Adulto
+426,Hospital de Gorbea,Araucanía Sur,Datos Establecimiento
+427,Hospital de Gorbea,Araucanía Sur,401 - Área Médica Adulto Cuidados Básicos
+428,Hospital de Gorbea,Araucanía Sur,407 - Área Médica Pediátrica Cuidados Básicos
+429,Hospital de Gorbea,Araucanía Sur,416 - Área Obstetricia
+430,Hospital de Gorbea,Araucanía Sur,427 - Área Sociosanitaria Adulto
+431,Hospital de Villarrica,Araucanía Sur,Datos Establecimiento
+432,Hospital de Villarrica,Araucanía Sur,330 - Área Pensionado
+433,Hospital de Villarrica,Araucanía Sur,403 - Área Médico-Quirúrgico Cuidados Básicos
+434,Hospital de Villarrica,Araucanía Sur,404 - Área Médico-Quirúrgico Cuidados Medios
+435,Hospital de Villarrica,Araucanía Sur,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+436,Hospital de Villarrica,Araucanía Sur,416 - Área Obstetricia
+437,Datos Servicio Salud,Valdivia,Datos Servicio Salud
+438,Hospital de Corral,Valdivia,Datos Establecimiento
+439,Hospital de Corral,Valdivia,401 - Área Médica Adulto Cuidados Básicos
+440,Hospital de Corral,Valdivia,407 - Área Médica Pediátrica Cuidados Básicos
+441,Hospital de Los Lagos,Valdivia,Datos Establecimiento
+442,Hospital de Los Lagos,Valdivia,401 - Área Médica Adulto Cuidados Básicos
+443,Hospital de Los Lagos,Valdivia,407 - Área Médica Pediátrica Cuidados Básicos
+444,Hospital de Los Lagos,Valdivia,416 - Área Obstetricia
+445,Hospital de Los Lagos,Valdivia,427 - Área Sociosanitaria Adulto
+446,Hospital de Lanco,Valdivia,Datos Establecimiento
+447,Hospital de Lanco,Valdivia,401 - Área Médica Adulto Cuidados Básicos
+448,Hospital de Lanco,Valdivia,407 - Área Médica Pediátrica Cuidados Básicos
+449,Hospital de Lanco,Valdivia,416 - Área Obstetricia
+450,Hospital Juan Morey (La Unión),Valdivia,Datos Establecimiento
+451,Hospital Juan Morey (La Unión),Valdivia,330 - Área Pensionado
+452,Hospital Juan Morey (La Unión),Valdivia,401 - Área Médica Adulto Cuidados Básicos
+453,Hospital Juan Morey (La Unión),Valdivia,402 - Área Médica Adulto Cuidados Medios
+454,Hospital Juan Morey (La Unión),Valdivia,403 - Área Médico-Quirúrgico Cuidados Básicos
+455,Hospital Juan Morey (La Unión),Valdivia,407 - Área Médica Pediátrica Cuidados Básicos
+456,Hospital Juan Morey (La Unión),Valdivia,413 - Área Neonatología Cuidados Básicos
+457,Hospital Juan Morey (La Unión),Valdivia,416 - Área Obstetricia
+458,Hospital de Río Bueno,Valdivia,Datos Establecimiento
+459,Hospital de Río Bueno,Valdivia,401 - Área Médica Adulto Cuidados Básicos
+460,Hospital de Río Bueno,Valdivia,403 - Área Médico-Quirúrgico Cuidados Básicos
+461,Hospital de Río Bueno,Valdivia,407 - Área Médica Pediátrica Cuidados Básicos
+462,Hospital de Río Bueno,Valdivia,416 - Área Obstetricia
+463,Hospital de Paillaco,Valdivia,Datos Establecimiento
+464,Hospital de Paillaco,Valdivia,401 - Área Médica Adulto Cuidados Básicos
+465,Hospital de Paillaco,Valdivia,407 - Área Médica Pediátrica Cuidados Básicos
+466,Hospital de Paillaco,Valdivia,416 - Área Obstetricia
+467,Hospital de Paillaco,Valdivia,427 - Área Sociosanitaria Adulto
+468,Datos Servicio Salud,Osorno,Datos Servicio Salud
+469,Hospital de Río Negro,Osorno,Datos Establecimiento
+470,Hospital de Río Negro,Osorno,401 - Área Médica Adulto Cuidados Básicos
+471,Hospital de Río Negro,Osorno,407 - Área Médica Pediátrica Cuidados Básicos
+472,Hospital de Puerto Octay,Osorno,Datos Establecimiento
+473,Hospital de Puerto Octay,Osorno,401 - Área Médica Adulto Cuidados Básicos
+474,Hospital de Puerto Octay,Osorno,407 - Área Médica Pediátrica Cuidados Básicos
+475,Datos Servicio Salud,Del Reloncaví,Datos Servicio Salud
+476,Hospital de Puerto Montt,Del Reloncaví,Datos Establecimiento
+477,Hospital de Puerto Montt,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+478,Hospital de Puerto Montt,Del Reloncaví,402 - Área Médica Adulto Cuidados Medios
+479,Hospital de Puerto Montt,Del Reloncaví,403 - Área Médico-Quirúrgico Cuidados Básicos
+480,Hospital de Puerto Montt,Del Reloncaví,404 - Área Médico-Quirúrgico Cuidados Medios
+481,Hospital de Puerto Montt,Del Reloncaví,405 - Área Cuidados Intensivos Adultos
+482,Hospital de Puerto Montt,Del Reloncaví,406 - Área Cuidados Intermedios Adultos
+483,Hospital de Puerto Montt,Del Reloncaví,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+484,Hospital de Puerto Montt,Del Reloncaví,411 - Área Cuidados Intensivos Pediátricos
+485,Hospital de Puerto Montt,Del Reloncaví,412 - Área Cuidados Intermedios Pediátricos
+486,Hospital de Puerto Montt,Del Reloncaví,413 - Área Neonatología Cuidados Básicos
+487,Hospital de Puerto Montt,Del Reloncaví,414 - Área Neonatología Cuidados Intensivos
+488,Hospital de Puerto Montt,Del Reloncaví,415 - Área Neonatología Cuidados Intermedios
+489,Hospital de Puerto Montt,Del Reloncaví,416 - Área Obstetricia
+490,Hospital de Puerto Montt,Del Reloncaví,418 - Área Psiquiatría Adulto Corta estadía
+491,Hospital de Puerto Montt,Del Reloncaví,421 - Área Psiquiatría Infanto-adolescente corta estadía
+492,Hospital de Puerto Montt,Del Reloncaví,330 - Área Pensionado
+493,Hospital de Llanquihue,Del Reloncaví,Datos Establecimiento
+494,Hospital de Llanquihue,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+495,Hospital de Llanquihue,Del Reloncaví,407 - Área Médica Pediátrica Cuidados Básicos
+496,Hospital de Llanquihue,Del Reloncaví,416 - Área Obstetricia
+497,Hospital de Frutillar,Del Reloncaví,Datos Establecimiento
+498,Hospital de Frutillar,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+499,Hospital de Frutillar,Del Reloncaví,407 - Área Médica Pediátrica Cuidados Básicos
+500,Hospital de Frutillar,Del Reloncaví,416 - Área Obstetricia
+501,Hospital de Frutillar,Del Reloncaví,418 - Área Psiquiatría Adulto Corta estadía
+502,Hospital de Fresia,Del Reloncaví,Datos Establecimiento
+503,Hospital de Fresia,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+504,Hospital de Fresia,Del Reloncaví,407 - Área Médica Pediátrica Cuidados Básicos
+505,Hospital de Maullín,Del Reloncaví,Datos Establecimiento
+506,Hospital de Maullín,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+507,Hospital de Maullín,Del Reloncaví,407 - Área Médica Pediátrica Cuidados Básicos
+508,Hospital de Maullín,Del Reloncaví,416 - Área Obstetricia
+509,Hospital de Calbuco,Del Reloncaví,Datos Establecimiento
+510,Hospital de Calbuco,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+511,Hospital de Calbuco,Del Reloncaví,407 - Área Médica Pediátrica Cuidados Básicos
+512,Hospital de Calbuco,Del Reloncaví,416 - Área Obstetricia
+513,Hospital de Futaleufú,Del Reloncaví,Datos Establecimiento
+514,Hospital de Futaleufú,Del Reloncaví,401 - Área Médica Adulto Cuidados Básicos
+515,Datos Servicio Salud,Aisén,Datos Servicio Salud
+516,Hospital Lord Cochrane,Aisén,Datos Establecimiento
+517,Hospital Lord Cochrane,Aisén,403 - Área Médico-Quirúrgico Cuidados Básicos
+518,Datos Servicio Salud,Magallanes,Datos Servicio Salud
+519,Datos Servicio Salud,Arauco,Datos Servicio Salud
+520,Hospital de Lebu,Arauco,Datos Establecimiento
+521,Hospital de Lebu,Arauco,401 - Área Médica Adulto Cuidados Básicos
+522,Hospital de Lebu,Arauco,407 - Área Médica Pediátrica Cuidados Básicos
+523,Hospital de Lebu,Arauco,416 - Área Obstetricia
+524,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,Datos Establecimiento
+525,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,330 - Área Pensionado
+526,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,403 - Área Médico-Quirúrgico Cuidados Básicos
+527,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,404 - Área Médico-Quirúrgico Cuidados Medios
+528,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+529,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+530,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,416 - Área Obstetricia
+531,Hospital Intercultural Kallvu Llanka (Cañete),Arauco,418 - Área Psiquiatría Adulto Corta estadía
+532,Hospital de Contulmo,Arauco,Datos Establecimiento
+533,Hospital de Contulmo,Arauco,401 - Área Médica Adulto Cuidados Básicos
+534,Hospital de Contulmo,Arauco,407 - Área Médica Pediátrica Cuidados Básicos
+535,Hospital de Contulmo,Arauco,416 - Área Obstetricia
+536,Datos Servicio Salud,Araucanía Norte,Datos Servicio Salud
+537,Hospital de Purén,Araucanía Norte,Datos Establecimiento
+538,Hospital de Purén,Araucanía Norte,330 - Área Pensionado
+539,Hospital de Purén,Araucanía Norte,401 - Área Médica Adulto Cuidados Básicos
+540,Hospital de Purén,Araucanía Norte,407 - Área Médica Pediátrica Cuidados Básicos
+541,Hospital de Collipulli,Araucanía Norte,Datos Establecimiento
+542,Hospital de Collipulli,Araucanía Norte,401 - Área Médica Adulto Cuidados Básicos
+543,Hospital de Collipulli,Araucanía Norte,407 - Área Médica Pediátrica Cuidados Básicos
+544,Hospital de Lonquimay,Araucanía Norte,Datos Establecimiento
+545,Hospital de Lonquimay,Araucanía Norte,330 - Área Pensionado
+546,Hospital de Lonquimay,Araucanía Norte,401 - Área Médica Adulto Cuidados Básicos
+547,Hospital de Lonquimay,Araucanía Norte,407 - Área Médica Pediátrica Cuidados Básicos
+548,Datos Servicio Salud,Chiloé,Datos Servicio Salud
+549,Hospital de Castro,Chiloé,Datos Establecimiento
+550,Hospital de Castro,Chiloé,330 - Área Pensionado
+551,Hospital de Castro,Chiloé,401 - Área Médica Adulto Cuidados Básicos
+552,Hospital de Castro,Chiloé,402 - Área Médica Adulto Cuidados Medios
+553,Hospital de Castro,Chiloé,403 - Área Médico-Quirúrgico Cuidados Básicos
+554,Hospital de Castro,Chiloé,404 - Área Médico-Quirúrgico Cuidados Medios
+555,Hospital de Castro,Chiloé,405 - Área Cuidados Intensivos Adultos
+556,Hospital de Castro,Chiloé,406 - Área Cuidados Intermedios Adultos
+557,Hospital de Castro,Chiloé,409 - Área Médico-Quirúrgico Pediátrica Cuidados Básicos
+558,Hospital de Castro,Chiloé,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+559,Hospital de Castro,Chiloé,412 - Área Cuidados Intermedios Pediátricos
+560,Hospital de Castro,Chiloé,414 - Área Neonatología Cuidados Intensivos
+561,Hospital de Castro,Chiloé,415 - Área Neonatología Cuidados Intermedios
+562,Hospital de Castro,Chiloé,416 - Área Obstetricia
+563,Hospital de Castro,Chiloé,418 - Área Psiquiatría Adulto Corta estadía
+564,Hospital de Castro,Chiloé,419 - Área Psiquiatría Adulto Mediana estadía
+565,Hospital de Ancud,Chiloé,Datos Establecimiento
+566,Hospital de Ancud,Chiloé,330 - Área Pensionado
+567,Hospital de Ancud,Chiloé,401 - Área Médica Adulto Cuidados Básicos
+568,Hospital de Ancud,Chiloé,402 - Área Médica Adulto Cuidados Medios
+569,Hospital de Ancud,Chiloé,403 - Área Médico-Quirúrgico Cuidados Básicos
+570,Hospital de Ancud,Chiloé,404 - Área Médico-Quirúrgico Cuidados Medios
+571,Hospital de Ancud,Chiloé,407 - Área Médica Pediátrica Cuidados Básicos
+572,Hospital de Ancud,Chiloé,408 - Área Médica Pediátrica Cuidados Medios
+573,Hospital de Ancud,Chiloé,410 - Área Médico-Quirúrgico Pediátrica Cuidados Medios
+574,Hospital de Ancud,Chiloé,413 - Área Neonatología Cuidados Básicos
+575,Hospital de Ancud,Chiloé,416 - Área Obstetricia
+576,Hospital de Quellón,Chiloé,Datos Establecimiento
+577,Hospital de Quellón,Chiloé,330 - Área Pensionado
+578,Hospital de Quellón,Chiloé,403 - Área Médico-Quirúrgico Cuidados Básicos
+579,Hospital de Quellón,Chiloé,404 - Área Médico-Quirúrgico Cuidados Medios
+580,Hospital de Quellón,Chiloé,407 - Área Médica Pediátrica Cuidados Básicos
+581,Hospital de Quellón,Chiloé,416 - Área Obstetricia

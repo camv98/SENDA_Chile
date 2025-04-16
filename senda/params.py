@@ -19,6 +19,8 @@ BUCKET_MODELOS = os.environ.get("BUCKET_MODELOS")
 CLIMA_CSV_PATH = os.environ.get("CLIMA_CSV_PATH")
 MODEL_BASE_NAME = os.environ.get("MODEL_BASE_NAME")
 MODEL_FOLDER = os.environ.get("MODEL_FOLDER")
+HISTORICO_CSV_PATH = os.environ.get("HISTORICO_CSV_PATH")
+
 
 ################## CONSTANTS #####################
 LOCAL_DATA_PATH = os.path.join(os.path.expanduser('~'), ".lewagon", "mlops", "data")
@@ -33,5 +35,5 @@ def validate_env_value(env, valid_options):
     if env_value not in valid_options:
         raise NameError(f"Invalid value for {env} in `.env` file: {env_value} must be in {valid_options}")
 
-for env, valid_options in env_valid_options.items():
-    validate_env_value(env, valid_options)
+# for env, valid_options in env_valid_options.items():
+#     validate_env_value(env, valid_options)

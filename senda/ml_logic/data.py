@@ -3,7 +3,6 @@ from datetime import datetime
 from google.cloud import bigquery
 from colorama import Fore, Style
 from pathlib import Path
-
 from senda.params import *
 
 def procesar_datasets_climaticos(seremi_data_dict: dict):
@@ -43,7 +42,7 @@ def procesar_datasets_climaticos(seremi_data_dict: dict):
     return seremi_data_dict
 
 def procesar_datasets_hospitales(hospitales_dic: dict):
-    
+
     filtrado_limpio = {}
     # Abreviaturas de los meses
     meses_abreviados = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
@@ -127,7 +126,7 @@ def procesar_datasets_hospitales(hospitales_dic: dict):
 
         # Guardar DataFrame limpio
         filtrado_limpio[año] = df
-        
+
     return filtrado_limpio
 
 
@@ -175,7 +174,7 @@ def descargar_de_bigquery(query, destino_pandas=True):
         destino_pandas (bool): Si True retorna DataFrame, si False guarda en CSV
     """
     job = client.query(query)
-    
+
     if destino_pandas:
         return job.to_dataframe()  # Para datasets pequeños/medianos
     else:

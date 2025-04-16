@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
+import os
 
 def preparar_dataset_climatico_avanzado(df_datos):
     if 'Area' in df_datos.columns:
@@ -140,7 +141,7 @@ def cargar_datos_clima(fecha_str, hospital, ruta_base):
     """Carga datos climáticos desde archivo basado en hospital y fecha"""
     fecha = pd.to_datetime(fecha_str)
     ruta_clima = os.path.join(ruta_base, f"clima_{hospital}.csv")
-    
+
     try:
         df = pd.read_csv(ruta_clima)
         df['Fecha'] = pd.to_datetime(df['Fecha'])
@@ -154,7 +155,7 @@ def cargar_datos_clima(fecha_str, hospital, ruta_base="nuevo_clima"):
     """Carga datos climáticos desde archivo basado en hospital y fecha"""
     fecha = pd.to_datetime(fecha_str)
     ruta_clima = os.path.join(ruta_base, f"{hospital}.csv")
-    
+
     try:
         df = pd.read_csv(ruta_clima)
         df['Fecha'] = pd.to_datetime(df['Fecha'])
@@ -167,7 +168,7 @@ def cargar_datos_clima(fecha_str, hospital, ruta_base="nuevo_clima"):
 def return_xnew_prepoc(fecha, hospital, ruta_clima="nuevo_clima"):
     """
     Ejemplo de uso completo:
-    
+
     resultado = predecir_camas(
         fecha="2025-03-01",
         hospital="Hospital Regional",
@@ -177,7 +178,7 @@ def return_xnew_prepoc(fecha, hospital, ruta_clima="nuevo_clima"):
     """
     # Paso 1: Cargar y preparar datos climáticos
     datos_clima = cargar_datos_clima(fecha, hospital, ruta_clima)
-    
+
     # Paso 2: Crear input para el preprocesador
     input_preprocesador = {
         'Temperatura Máxima': datos_clima['Temperatura Máxima'],
@@ -185,70 +186,74 @@ def return_xnew_prepoc(fecha, hospital, ruta_clima="nuevo_clima"):
         'Precipitaciones (suma)': datos_clima['Precipitaciones (suma)'],
         'mes': pd.to_datetime(fecha).month
     }
-    
+
     # Paso 3: Configurar y usar el ClimaPreprocessor
     preprocesador = ClimaPreprocessor()
     df_hospital_historico=pd.read_csv(os.path.join("df_extr", f"{hospital}_df_extr.csv"))
     preprocesador.fit(df_hospital_historico)  # Entrenar con datos históricos
     datos_procesados = preprocesador.transform(input_preprocesador)
-    
+
     # Paso 4: Retornar resultado (aquí podrías añadir tu modelo predictivo)
     return datos_procesados
 def preparar_y_preprocesar_x_futuro(X_pred, df_clima_general, df_hospital_historico):
     """
     Combina la preparación de X_futuro y el preprocesamiento de datos climáticos,
     utilizando un dataset general de clima y el dataframe histórico de hospitales.
-    xpred= deberia tener 
+    xpred= deberia tener
         "fecha": pd.to_datetime(date),
         "hospital": [hospital],
         "SEREMI": [SEREMI],
     """
-    hospital=X_pred['hospital']
-    fecha=X_pred['fecha']
-    seremi = X_pred['SEREMI']
+    hospital=X_pred['hospital'].iloc[0]
+    fecha=X_pred['fecha'].iloc[0]
+    seremi = X_pred['SEREMI'].iloc[0]
+
     fecha_dt = pd.to_datetime(fecha)
     datos_clima = df_clima_general[
         (df_clima_general['seremi'] == seremi) &
         (pd.to_datetime(df_clima_general['Mes']).dt.year == fecha_dt.year) &
         (pd.to_datetime(df_clima_general['Mes']).dt.month == fecha_dt.month)
-    ]
-
-    # Verificar si el DataFrame está vacío
+    ]    # Verificar si el DataFrame está vacío
     if datos_clima.empty:
         print(f"Advertencia: No se encontraron datos climáticos para {hospital}, {fecha}.")
-        return None  # O algún otro valor predeterminado
-
-    datos_clima = datos_clima.iloc[0]
+        return None  # O algún otro valor predeterminado    datos_clima = datos_clima.iloc[0]
     # 2. Crear input para el preprocesador
     input_preprocesador = {
         'Temperatura Máxima': datos_clima['temperature_2m_max'],
         'Temperatura Mínima': datos_clima['temperature_2m_min'],
         'Precipitaciones (suma)': datos_clima['precipitation_sum'],
         'mes': fecha_dt.month
-    }
-
-    # 3. Configurar y usar el ClimaPreprocessor
+    }    # 3. Configurar y usar el ClimaPreprocessor
     preprocesador = ClimaPreprocessor()
     preprocesador.fit(df_hospital_historico)  # Entrenar con datos históricos
-    datos_procesados = preprocesador.transform(input_preprocesador)
-
-    # 4. Definir features requeridas (lista predefinida)
-    features_requeridas = [
-        'Dias Cama Ocupados', 'Promedio Cama Disponibles', 'Numero de Egresos',
-        'Mes', 'Trimestre', 'lag_1', 'lag_2', 'lag_3', 'media_movil_3',
-        'porcentaje_ocupacion', 'variacion_disponibles',
-        'ocupados_media_movil', 'promedio_media_movil', 'egresos_media_movil',
-        'Temperatura Máxima', 'Temperatura Mínima', 'Precipitaciones (suma)',
-        'Diferencia Térmica', 'temp_max_movil', 'precipitacion_movil',
-        'same_month_last_year', 'hist_avg_mes',
-        'interaccion_ocupacion_temp', 'interaccion_precipitacion_disp',
-        'Viento_SW', 'Viento_W'
-    ]
-
-    # 5. Crear DataFrame base desde datos_procesados
-    X_futuro = datos_procesados.copy()
-
-    # 6. Añadir variables obligatorias del histórico
+    datos_procesados = preprocesador.transform(input_preprocesador)    # 4. Definir features requeridas (lista predefinida)
+    features_requeridas = ['Dias Cama Ocupados',
+                           'Promedio Cama Disponibles',
+                           'Numero de Egresos', 'Mes',
+                           'Trimestre',
+                           'lag_1', 'lag_2', 'lag_3',
+                           'media_movil_3',
+                           'porcentaje_ocupacion',
+                           'variacion_disponibles',
+                           'ocupados_media_movil',
+                           'promedio_media_movil',
+                           'egresos_media_movil',
+                           'Temperatura Máxima',
+                           'Temperatura Mínima',
+                           'Precipitaciones (suma)',
+                           'Diferencia Térmica',
+                           'temp_max_movil',
+                           'precipitacion_movil',
+                           'same_month_last_year',
+                           'hist_avg_mes',
+                           'interaccion_ocupacion_temp',
+                           'interaccion_precipitacion_disp',
+                           'Viento_NW',
+                           'Viento_S',
+                           'Viento_SE',
+                           'Viento_SW',
+                           'Viento_W']    # 5. Crear DataFrame base desde datos_procesados
+    X_futuro = datos_procesados.copy()    # 6. Añadir variables obligatorias del histórico
     ultima = df_hospital_historico.iloc[-1]
     obligatorias = {
         'Dias Cama Ocupados': ultima['Dias Cama Ocupados'],
@@ -260,29 +265,18 @@ def preparar_y_preprocesar_x_futuro(X_pred, df_clima_general, df_hospital_histor
         'media_movil_3': df_hospital_historico['Dias Cama Disponibles'].rolling(3).mean().iloc[-1],
         'porcentaje_ocupacion': (ultima['Dias Cama Ocupados'] / ultima['Promedio Cama Disponibles']) * 100
     }
-    X_futuro = X_futuro.assign(**obligatorias)
-
-    # 7. Calcular variables derivadas de clima
+    X_futuro = X_futuro.assign(**obligatorias)    # 7. Calcular variables derivadas de clima
     if 'Temperatura Máxima' in X_futuro:
         X_futuro['Diferencia Térmica'] = X_futuro['Temperatura Máxima'] - X_futuro['Temperatura Mínima']
         X_futuro['interaccion_ocupacion_temp'] = X_futuro['porcentaje_ocupacion'] * X_futuro['Temperatura Máxima']
-        X_futuro['interaccion_precipitacion_disp'] = X_futuro['Precipitaciones (suma)'] * X_futuro['Promedio Cama Disponibles']
-
-    # 8. Inicializar columnas de viento faltantes con 0
-    vientos_requeridos = ['Viento_E', 'Viento_NE', 'Viento_S', 'Viento_SE', 'Viento_SW', 'Viento_W']
+        X_futuro['interaccion_precipitacion_disp'] = X_futuro['Precipitaciones (suma)'] * X_futuro['Promedio Cama Disponibles']    # 8. Inicializar columnas de viento faltantes con 0
+    vientos_requeridos = ['Viento_SE', 'Viento_S', 'Viento_NW']
     for viento in vientos_requeridos:
         if viento not in X_futuro:
-            X_futuro[viento] = 0.0
-
-    # 9. Asegurar todas las columnas requeridas
+            X_futuro[viento] = 0.0    # 9. Asegurar todas las columnas requeridas
     for col in features_requeridas:
         if col not in X_futuro:
-            X_futuro[col] = df_hospital_historico[col].mean() if col in df_hospital_historico.columns else 0.0
-
-    # 10. Ordenar columnas EXACTAMENTE como el modelo las espera
-    X_futuro = X_futuro[features_requeridas]
-
-    # 11. Asegurar que todos los datos sean numéricos
+            X_futuro[col] = df_hospital_historico[col].mean() if col in df_hospital_historico.columns else 0.0    # 10. Ordenar columnas EXACTAMENTE como el modelo las espera
+    X_futuro = X_futuro[features_requeridas]    # 11. Asegurar que todos los datos sean numéricos
     X_futuro = X_futuro.astype(float)
-
     return X_futuro
