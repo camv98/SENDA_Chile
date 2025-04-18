@@ -637,7 +637,7 @@ def prediction_page():
         st.markdown(f"""
         <div style="margin-top: 20px; padding: 15px; border-radius: 10px; background-color: rgba(248, 249, 250, 0.5);">
             <p style="font-size: 1rem; margin: 5px 0;"><strong>SEREMI:</strong> {st.session_state.selected_seremi}</p>
-            <p style="font-size: 1rem; margin: 5px 0;"><strong>{"Servicio Salud" if st.session_state.selected_hospital == "Datos Generales Seremi" else "Hospital"}:</strong> {st.session_state.selected_hospital}</p>
+            <p style="font-size: 1rem; margin: 5px 0;"><strong>{"Servicio Salud" if st.session_state.selected_hospital == "Hospital" else "Datos Generales Seremi"}:</strong> {st.session_state.selected_hospital}</p>
             <p style="font-size: 1rem; margin: 5px 0;"><strong>Mes:</strong> {st.session_state.selected_month}</p>
         </div>
         """, unsafe_allow_html=True)
